@@ -1,0 +1,7 @@
+[theme]
+base="light"
+primaryColor="#1f77b4"       # Optional: primary accent color
+backgroundColor="#ffffff"    # Optional: background
+secondaryBackgroundColor="#f0f2f6"  # Optional: sidebar
+textColor="#000000"
+font="sans serif"
