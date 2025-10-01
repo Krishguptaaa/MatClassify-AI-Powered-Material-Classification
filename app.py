@@ -11,7 +11,7 @@ cluster_names = data['cluster_names']
 
 pca = joblib.load('models/pca_transformer.pkl')
 
-st.title("Materials Classification Project")
+st.title("MatClassify")
 
 st.markdown("""
 This project is designed to help engineers, researchers, and students quickly classify materials based on their mechanical properties.  
