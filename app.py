@@ -5,11 +5,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-data = joblib.load('kmeans_materials.pkl')
+data = joblib.load('models/kmeans_materials.pkl')
 kmeans = data['model']
 cluster_names = data['cluster_names']
 
-pca = joblib.load('pca_transformer.pkl')
+pca = joblib.load('models/pca_transformer.pkl')
 
 st.title("Materials Classification Project")
 
@@ -54,14 +54,14 @@ st.write(f"**Cluster {cluster}: {cluster_name}**")
 
 
 
-X_pca_all = joblib.load('X_pca_all.pkl')
-kmeans_labels_all = joblib.load('kmeans_labels_all.pkl')
+X_pca_all = joblib.load('models/X_pca_all.pkl')
+kmeans_labels_all = joblib.load('models/kmeans_labels_all.pkl')
 
 
 
 # Create a scatter plot of the PCA data, colored by the K-Means labels
-X_pca_all = joblib.load("X_pca_all.pkl")
-kmeans_labels_all = joblib.load("kmeans_labels_all.pkl")
+X_pca_all = joblib.load("models/X_pca_all.pkl")
+kmeans_labels_all = joblib.load("models/kmeans_labels_all.pkl")
 # Transform original cluster centers into PCA space
 cluster_centers_pca = kmeans.cluster_centers_
 
