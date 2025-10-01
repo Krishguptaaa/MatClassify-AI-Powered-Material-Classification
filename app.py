@@ -126,26 +126,42 @@ plt.scatter(
     c="black", marker="D", s=200, label="Cluster Centers"
 )
 
-# Page config
 st.set_page_config(
     page_title="MatClassify",
     layout="centered",
     initial_sidebar_state="expanded"
 )
 
-# Force light colors by overriding CSS
+# Force light theme via CSS
 st.markdown(
     """
     <style>
-    /* Backgrounds */
-    .stApp { background-color: #ffffff; color: #000000; }
-    .css-1d391kg { background-color: #f0f2f6; }  /* sidebar */
+    /* Main app background & text */
+    .stApp {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    /* Sidebar background & text */
+    [data-testid="stSidebar"] {
+        background-color: #f0f2f6;
+        color: #000000;
+    }
+
+    /* Sidebar headers */
+    [data-testid="stSidebar"] h2 {
+        color: #000000;
+    }
+
+    /* Sidebar sliders & inputs */
+    .stSlider > div > div {
+        color: #000000;
+    }
+    .stTextInput>div>div>input {
+        color: #000000;
+        background-color: #ffffff;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
-
-
-# Plot
-
-
